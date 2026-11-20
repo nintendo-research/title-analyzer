@@ -4,7 +4,6 @@ from titledb.scanner import FileRecord, FileType, FolderScanner
 
 import os
 import sys
-import urllib3
 
 
 class Program:
@@ -60,8 +59,6 @@ def main() -> None:
     if len(sys.argv) == 3 and sys.argv[2] != "reanalyze":
         print_usage("Second argument must be 'reanalyze' if provided")
         return
-
-    urllib3.disable_warnings()
 
     program = Program()
     program.main(sys.argv[1], len(sys.argv) == 3)
