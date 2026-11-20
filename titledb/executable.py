@@ -182,8 +182,7 @@ class ExecutableAnalyzer:
 
         info.al = \
             b"IsEnableFishEye" in rodata or \
-            b"al::InitializeThread" in rodata or \
-            b"alLightMap" in rodata
+            b"al::InitializeThread" in rodata
         
         info.eagle = b"libeagle" in rodata
         info.lms = b"MsgStdBn" in rodata
