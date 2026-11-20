@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools >= 77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "title-analyzer"
+version = "0.0.0"
+dependencies = ["lz4", "zbic"]
+authors = [
+    {name = "Yannik Marchand", email = "ymarchand@me.com"}
+]
+description = "Title database analysis scripts."
+readme = "README.md"
+
+[project.urls]
+Repository = "https://github.com/nintendo-research/title-analyzer.git"
+Issues = "https://github.com/nintendo-research/title-analyzer/issues"
+
+[tool.setuptools.packages.find]
+include = ["titledb"]
