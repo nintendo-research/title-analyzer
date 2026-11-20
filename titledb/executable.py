@@ -179,12 +179,18 @@ class ExecutableAnalyzer:
         info.enl = b"enl::TaskThread" in rodata
         info.eui = b"LetterAnimControl" in rodata
         info.gsys = b"gsys::Layer3D" in rodata
-        info.al = b"IsEnableFishEye" in rodata
+
+        info.al = \
+            b"IsEnableFishEye" in rodata or \
+            b"al::InitializeThread" in rodata or \
+            b"alLightMap" in rodata
+        
         info.eagle = b"libeagle" in rodata
         info.lms = b"MsgStdBn" in rodata
         info.nexrf = b"MatchmakeRefereeDDLDeclarations" in rodata
         info.nexms = b"MessagingServiceDDLDeclarations" in rodata
         info.modsys = b"ModuleSystem::moduleCalc_" in rodata
+        
         info.phive = \
             b"phive::AllocDrawShape" in rodata or \
             b"Phive::Memory Stats" in rodata or \
